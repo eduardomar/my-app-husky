@@ -20,6 +20,11 @@
     "eslint": "eslint \"src/**/*.{js,jsx}\"",
     "eslint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "yarn run eslint:fix"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,7 +52,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.4.1",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.4.1"
   }
 }
